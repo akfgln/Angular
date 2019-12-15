@@ -13,6 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { DishService } from './services/dish.service';
+import { PromotionService } from './services/promotion.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -44,7 +45,10 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     AppRoutingModule,
     AppRoutingModule
   ],
-  providers: [DishService],
+  providers: [ 
+      DishService, 
+      PromotionService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -20,6 +20,7 @@ import { MenuComponent } from './menu/menu.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import {MatSliderModule} from '@angular/material/slider';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { DishService } from './services/dish.service';
 import { LeaderService } from './services/leader.service';
@@ -60,6 +61,7 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     MatFormFieldModule, 
     MatInputModule,
+    MatSliderModule,
     MatCheckboxModule,  
     MatSelectModule,
     MatSlideToggleModule,

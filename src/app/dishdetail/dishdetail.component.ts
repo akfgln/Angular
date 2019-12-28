@@ -20,7 +20,6 @@ export class DishdetailComponent implements OnInit {
   next: string;
   commentForm: FormGroup;
   comment: Comment;
-  prvComment: Comment;
   @ViewChild('cform', {static: false}) commentFormDirective;
 
   constructor(private dishService: DishService,
@@ -32,13 +31,8 @@ export class DishdetailComponent implements OnInit {
 
    
   ngOnInit() {
-   // this.prvComment = new Comment();
     this.dishService.getDishIds().subscribe(dishIds => this.dishIds = dishIds);
-    this.route.params.pipe(switchMap((params: Params) => this.dishService.getDish(params['id']))).subscribe(dish => { 
-      this.dish = dish;
-      this.setPrevNext(dish.id); 
-    
-    });
+    this.route.params.pipe(switchMap((params: Params) => this.dishService.getDish(params['id']))).subscribe(dish => { this.dish = dish; this.setPrevNext(dish.id); });
   }
   
     setPrevNext(dishId: string) {

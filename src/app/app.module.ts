@@ -23,9 +23,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
+
 import { DishService } from './services/dish.service';
 import { LeaderService } from './services/leader.service';
 import { PromotionService } from './services/promotion.service';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -75,6 +78,7 @@ import { baseURL } from './shared/baseurl';
       DishService, 
       PromotionService,
       LeaderService,
+      ProcessHTTPMsgService,
       { provide: 'BaseURL', useValue: baseURL }
     ],
     entryComponents: [
